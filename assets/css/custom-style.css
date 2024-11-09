@@ -1,0 +1,76 @@
+.header-area {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.logo img {
+    max-height: 50px; 
+    width: auto; 
+    margin-right: 20px; 
+}
+
+.nav {
+    display: flex; 
+    list-style-type: none; 
+}
+
+.nav li {
+    margin: 0 10px; 
+}
+
+.menu-trigger {
+    display: none; 
+}
+
+@media (max-width: 768px) {
+    .header-area {
+        flex-direction: column; 
+    }
+    
+    .nav {
+        flex-direction: column; 
+        width: 100%; 
+    }
+
+    .menu-trigger {
+        display: block; 
+    }
+}
+
+/* Center the search bar in the header for desktop */
+.header-area .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Adjust as necessary */
+}
+
+/* Adjust for mobile devices */
+@media (max-width: 768px) {
+    .header-area .search-bar {
+        margin: 20px 0; /* Adjust as necessary */
+        width: 100%; /* Full width for mobile */
+    }
+    .header-area .search-bar input {
+        width: 90%; /* Adjust width for mobile */
+    }
+}
+
+/* Suggestions dropdown */
+.suggestions {
+    border: 1px solid #ccc;
+    background-color: white;
+    position: absolute;
+    width: calc(100% - 20px);
+    z-index: 1000;
+}
+
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #f0f0f0;
+}

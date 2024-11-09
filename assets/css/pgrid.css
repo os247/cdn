@@ -1,0 +1,115 @@
+/* Main Section Styles */
+#product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to next line */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px; /* Space around the product grid */
+}
+
+/* Filter Section Styles */
+#filter-section {
+    margin: 20px; /* Margin around filter section */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements */
+}
+
+#filter-section input[type="number"],
+#filter-section select {
+    margin: 5px 0; /* Margin around input fields */
+    padding: 8px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded edges */
+    width: 80%; /* Full width for inputs */
+}
+
+#filter-section label {
+    margin-right: 10px; /* Space between label and input */
+    font-weight: bold; /* Bold labels */
+}
+
+
+/* Product Card Styles */
+.product-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #e1e1e1; /* Light border for card */
+    border-radius: 8px; /* Rounded corners */
+    width: calc(20% - 20px); /* 5 items per row on desktop */
+    margin: 10px; /* Space between cards */
+    text-align: center; /* Center text in card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.2s; /* Smooth scaling effect on hover */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.product-card img {
+    max-width: 80%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 8px; /* Match card corners */
+    border-top-right-radius: 8px;
+}
+
+.product-card h3 {
+    margin: 10px 0; /* Margin for product title */
+    font-size: 1.2em; /* Slightly larger font for title */
+}
+
+.product-card p {
+    font-size: 1em; /* Font size for price */
+    color: #555; /* Dark gray for better readability */
+}
+
+.product-card button {
+    background-color: #8F05B6; /* Green button */
+    color: white; /* White text on button */
+    border: none; /* No border */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.product-card button:hover {
+    background-color: #8F05B6; /* Darker green on hover */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(25% - 20px); /* 4 items per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 20px); /* 2 items per row on small tablets/mobile */
+    }
+
+    #filter-section {
+        flex-direction: column; /* Stack filter elements on mobile */
+        align-items: center; /* Center the filter section */
+    }
+
+    #filter-section input[type="number"],
+    #filter-section select {
+        width: 90%; /* Full width for inputs on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: calc(100% - 20px); /* 1 item per row on mobile */
+    }
+
+    .product-card h3 {
+        font-size: 1em; /* Smaller title on mobile */
+    }
+
+    .product-card p {
+        font-size: 0.9em; /* Smaller price on mobile */
+    }
+}
